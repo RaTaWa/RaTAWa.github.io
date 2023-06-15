@@ -1,0 +1,1004 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head> <!-------------------------------------------------------------->
+
+	<meta charset="utf-8" />
+	<title> Victor Ash </title>
+	<link rel="icon shortcut" type="image/png" href="ścieżka_do_pliku.png"/>
+	<meta name="description" content=" ... " />
+	<meta name="keywords" content=" ..., ..., ..." />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1ZrRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script type="text/javascript">
+  	function start(){
+      document.getElementById("theme1").addEventListener("click", themeSwitch1);
+      document.getElementById("theme2").addEventListener("click", themeSwitch2);
+      document.getElementById("theme3").addEventListener("click", themeSwitch3);
+      document.getElementById("theme4").addEventListener("click", themeSwitch4);
+      flexx();
+    }
+    
+    function themeSwitch1(){
+      document.documentElement.style.setProperty('--lightbrown', "#F61498");
+      document.documentElement.style.setProperty('--blue', "#93EDCE");
+      document.documentElement.style.setProperty('--darkblue', "#3B0279");
+      document.documentElement.style.setProperty('--black', "#140509");
+    }
+      
+    function themeSwitch2(){
+      document.documentElement.style.setProperty('--lightbrown', "#71B88E");
+      document.documentElement.style.setProperty('--blue', "#F492A9");
+      document.documentElement.style.setProperty('--darkblue', "#226054");
+      document.documentElement.style.setProperty('--black', "#E4F7F0");
+    }
+    
+    function themeSwitch3(){
+      document.documentElement.style.setProperty('--lightbrown', "#3E3E3E");
+      document.documentElement.style.setProperty('--blue', "#D1C2AA");
+      document.documentElement.style.setProperty('--darkblue', "#9B8C73");
+      document.documentElement.style.setProperty('--black', "#E1E1E1");
+    }
+    
+    function themeSwitch4(){
+      document.documentElement.style.setProperty('--lightbrown', "#5573E4");
+      document.documentElement.style.setProperty('--blue', "#FFCC66");
+      document.documentElement.style.setProperty('--darkblue', "#322A24");
+      document.documentElement.style.setProperty('--black', "#EF8934");
+    }
+    
+   function flexx(){
+     var textWrapper = document.querySelector('.ml9 .letters');
+      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml9 .letter',
+          scale: [0, 1],
+          duration: 1500,
+          elasticity: 600,
+          delay: (el, i) => 45 * (i+1)
+        }).add({
+          targets: '.ml9',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
+   }
+
+    
+  </script> 
+  <!------------------------------------------------------------->
+  
+  <style> 
+    :root {
+      --black: #140509; 
+      --darkblue: #3B0279;
+      --blue: #93EDCE;
+      --lightbrown: #F61498;
+    }
+    
+    
+    body {
+    	font-family: "Roboto", sans-serif;;
+      letter-spacing: 3px;
+      font-size: 16px;
+      background: var(--black);
+    }
+    
+    section{
+    	display: block;
+    	width: 70vw;
+      margin-left: 15%;
+      margin-right: 15%;
+      padding: 0vw;
+      color: white;
+      background-color: var(--darkblue);
+      margin-bottom: 50px;
+     	letter-spacing: 1px;
+      border: 3vw solid var(--darkblue);
+  		border-radius: 3vw;
+    }
+    ul{
+    	list-style-type: none;
+    }
+    
+    #section-title{
+    	color: var(--blue);
+      font-size: 3.5vw;
+      border-left: 10px solid var(--blue);
+      padding-left: 10px;
+      margin-bottom: 30px;
+    }
+    
+    /* ----------------------------  VICTOR ASH SIGN ----------------------------  */
+    
+    #ash-head{
+    	background-color:var(--black);
+      opacity: 1.0;
+      width: 100vw;
+      padding-bottom: 10%;
+      padding-top: 10%;
+      left: 0%;
+      text-align: center;
+    }
+    
+    .ml9 {
+      position: relative;
+      font-weight: bold;
+      font-size: 8vw;
+      font-family: Georgia, serif;
+    }
+
+    .ml9 .text-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.2em;
+      padding-right: 0.05em;
+      padding-bottom: 0.1em;
+      overflow: hidden;
+    }
+
+    .ml9 .letter {
+      transform-origin: 50% 100%;
+      display: inline-block;
+      line-height: 1em;
+    }
+    
+    .ml9 .letter:nth-of-type(1){color: var(--darkblue);}
+    .ml9 .letter:nth-of-type(2){color: var(--blue);}
+    .ml9 .letter:nth-of-type(3){color: var(--lightbrown);}
+    .ml9 .letter:nth-of-type(4){color: var(--darkblue);}
+    .ml9 .letter:nth-of-type(5){color: var(--blue);}
+    .ml9 .letter:nth-of-type(6){color: var(--lightbrown);}
+    .ml9 .letter:nth-of-type(7){color: var(--darkblue);}
+    .ml9 .letter:nth-of-type(8){color: var(--blue);}
+    .ml9 .letter:nth-of-type(9){color: var(--lightbrown);}
+    
+    
+    /* ----------------------------  NAVIGATION BAR  ----------------------------  */
+    
+    #logo{
+      font-weight: bold;
+      font-size: 2.75vw;
+      background-color: var(--blue);
+      display: inline;
+      width: 100%;     
+      background-color: var(--darkblue);
+ 
+      opacity: 1.0;
+      top: 0%;
+      position: fixed;
+      left: 0;
+      z-index: 1;
+      text-align: center;
+      height: 5vw;
+      vertical-align: middle;
+      border-bottom: 5px solid var(--lightbrown);
+    }
+    
+    .logo-nav{
+    	padding-right: 2vw;
+      padding-left: 2vw;
+    }
+    
+    a{
+    	text-decoration: none;
+      background-color: var(--darkblue);
+      color: var(--lightbrown);
+      font-size: 0.9em;
+    }
+    
+    a:hover{
+    	text-decoration: none;
+      background-color: var(--darkblue);
+      color: var(--blue);
+    }
+    
+    #theme1{opacity: 0.9;}
+    #theme2{opacity: 0.8;}
+    #theme3{opacity: 0.7;}
+    #theme4{opacity: 0.6;}
+    
+    /* ----------------------------  NAVIGATION BAR ----------------------------  */
+    
+     /* ---------------------------- SEKCJA ABOUT ----------------------------  */
+    #about{
+      justify-content: center;
+    }
+    
+    #about p{
+      color: var(--lightbrown);
+    }
+    
+    .start-para{
+    	font-size: 3vw;
+      
+    }
+    
+    #embedmap-canvas img{
+    	max-width:none!important;
+      background:none!important;
+      font-size: inherit;
+      font-weight:inherit;
+      opacity: 1.0!important;
+    }
+    
+    p:first-line{font-weight: bold;}
+    /* ----------------------------  SEKCJA ABOUT ----------------------------  */
+    
+    /* ----------------------------  SEKCJA GALLERY  ----------------------------  */
+   	@media only screen and (max-width: 992px) {
+      .card{
+      	width: 56vw !important;
+      }
+      .card img{
+      	width: 56vw !important;
+        height: 60vh;
+      }  
+    }
+    .card-text{
+    	font-size: 10px; 
+      color: var(--lightbrown);
+      border-left: 5px solid var(--lightbrown);
+      padding-left: 10px;
+    }
+    
+    .card-title{
+    	font-size: 18px; 
+      font-weight: bold;
+      color: var(--blue);
+      border-left: 5px solid var(--blue); 
+    }
+    
+    .card-body{
+    	padding: 10px;
+    }
+    .card img{
+    	width: 28vw;
+      height: 30vh;
+      object-fit: cover;
+    }
+    
+    .card img:hover{
+      filter: invert(1);
+    }
+    
+    .card{
+      background-color: var(--black);
+      width: 28vw;
+      margin: 10px;
+    }
+    
+    img{opacity: 1.0;}
+    /* ----------------------------  SEKCJA GALLERY  ---------------------------- */
+    
+    /* ----------------------------  SEKCJA KONTAKT ----------------------------  */ 
+    #contact input,#contact input::placeholder,#contact textarea,#contact textarea::placeholder,#contact button{
+    	background-color: var(--blue);
+      color: var(--darkblue);
+      
+      margin-right: 1vw;
+      margin-top: 2vh;
+      border-style: none;
+      border: 1vw solid var(--blue);
+  		border-radius: 1vw;
+      font-size: 12px;
+    }
+    #contact input{width:19.9vw; color: black;}
+    #contact textarea{width:64vw; color: black; resize:none;}
+    #contact button{
+    	background-color: var(--lightbrown);
+      border-color: var(--lightbrown);
+      width: 64vw;
+      font-size: 12px;
+    }
+    
+    @media only screen and (max-width: 600px) {
+      #contact input,#contact input::placeholder,#contact textarea,#contact textarea::placeholder{
+      	font-size: 12px;
+      }
+  	}
+   	/* ----------------------------  SEKCJA KONTAKT ----------------------------  */
+    /* ----------------------------  SEKCJA Sklep- SHOP ----------------------------  */
+    .accordion {
+      background-color: var(--lightbrown); 
+      color: var(--darkblue);           
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      font-size: 15px;
+      transition: background-color 1s;
+      border-radius: 30px 30px 30px 30px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 2em;
+    }                
+    .active {
+    filter: brightness(110%);
+    }
+
+    .expanded {
+  max-height: none !important;
+}
+
+.hidden {
+  display: none;
+}
+    .shop-row {
+      display: flex;
+      flex-direction: row;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+
+    .shop-col {
+      display: flex;
+      flex-direction: column;
+      width: calc(33.33% - 35px);
+      margin-left: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 350px;
+      text-align: center;
+    }
+
+    .shop-col-head {
+      border: 3px solid black;    /*Do zmiany*/  
+      background-color: var(--lightbrown);      /*Do zmiany*/
+      border-radius: 8px 8px 0 0;
+      height: 20%;
+      padding: 10px;
+      box-shadow: 15px 40px 15px black;  /* może Do zmiany*/
+      color: white;
+       font-size: 1.5em;
+    }
+
+    .shop-col-body {
+      background-color: var(--darkblue);  /*Do zmiany*/
+      border: 3px solid black;
+      border-top: 0px;
+      border-bottom: 0px;
+      height: 40%;
+      padding: 10px;
+      overflow: auto;
+      box-shadow: 15px 30px 15px black;    /* może Do zmiany*/
+      font-size: 1em;
+    }
+
+    .shop-col-body-form {
+      background-color: var(--darkblue);  /*Do zmiany*/
+      border: 3px solid black;
+      border-top: 0px solid black;
+      border-radius: 0 0 8px 8px;
+      height: 50%;
+      box-shadow: 15px 20px 15px black;/* może Do zmiany*/
+    }
+
+    .shop-col-body-button {
+      width: 80%;
+      margin: 10%;
+      border: 10 solid black;
+      border-radius: 8px;
+      text-align: center;
+      background-color: white;
+      border-color: var(--lightbrown);
+      color: var(--lightbrown);
+      font-size: 1.5em;
+    }
+
+    .shop-col-body-button:hover {
+      background-color: var(--lightbrown);
+      transition: background-color 0.3s;
+      color: var(--darkblue);
+    }
+
+    .shop-col-body-number {
+      width: 25%;
+      background-color: white;  /*Do zmiany*/
+      border-radius: 8px;
+      border: 1 solid black;  /*Do zmiany*/
+    }
+
+    .shop-col-body-select{
+      width: 50%;
+      border-radius: 8px;
+      border: 1 solid black; 
+    }
+    
+
+    @media only screen and (max-width: 1200px) {
+     .shop-col{
+        width: 70%;
+      }
+    }
+    @media only screen and (max-width: 1200px) {
+      .shop-row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding-left: 50px;
+      }
+    }
+    th, td{
+      width: 15%;
+      border: 1px solid black;
+      margin: 2px;
+      background-color: aqua;
+    }
+
+
+
+    /* ----------------------------  SEKCJA Sklep- SHOP ----------------------------  */
+    /* ----------------------------  SEKCJA STOPKA - FOOTER  ----------------------------  */
+    .social-icons {
+        font-size: 50px;
+        cursor: pointer;
+    }
+    .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+        color: #000000!important;
+    }
+
+    #footer-copy{
+    	opacity: 45%;
+      font-size: 10px;
+      
+    }
+    
+    #footer i{
+    	color: var(--lightbrown);
+      background-color: var(--darkblue);
+      font-size: 50px;
+      padding: 10px;
+    }
+    
+    #footer{border-radius: 30px 30px 30px 30px;}
+    /* ----------------------------  SEKCJA STOPKA ----------------------------   */
+    
+   
+
+
+  </style><!------------------------------------------------------------->
+</head> <!------------------------------------------------------------->
+
+<body onload="start()"> <!-------------------------------------------------------------->
+
+  <div id="logo">
+   		<a href="#logo" class="logo-nav">Home</a>
+      <a href="#about" class="logo-nav">About</a>
+      <a href="#gallery" class="logo-nav">Gallery</a>
+      <a href="#shop" class="logo-nav">Shop</a>
+      <a href="#contact" class="logo-nav">Contact</a>
+    	<a href="#" id="theme1"> 1 </a>
+    	<a href="#" id="theme2"> 2 </a>
+    	<a href="#" id="theme3"> 3 </a>
+      <a href="#" id="theme4"> 4 </a>
+  </div>
+ 	<br><br><br><br><br><br><br><br>
+  <div id="ash-head">
+  	<h1 class="ml9">
+      <span class="text-wrapper">
+        <span class="letters">VICTOR ASH</span>
+      </span>
+    </h1>
+  </div>
+  <br><br><br><br><br><br><br><br>
+  
+  <section id="about">
+    <h3 id="section-title" >ABOUT ME</h3>
+    <br>
+    
+    <div class="fluid">
+    	<div class="row"> 
+      <div id="textprov" class="col-lg-3 col-md-6 col-sm-12">
+        <p class="start-para"> General </p>
+      	 <p>Victor Ash, also known as Ash, is a Copenhagen-based artist originally from Paris, France. Ash primarily works on canvas, lithography, and sometimes installations. He has exhibited regularly in various museums and galleries around the world since the late 1980s. </p>
+      </div>
+      <div id="textprov" class="col-lg-3 col-md-6 col-sm-12">
+      	<p class="start-para"> 2021 </p>
+				<p> The Child, large scale painting commissioned by the United Nations Zero Hunger program and the city of Oakland, California, USA
+  	Hal Singer, 3 big format paintings on the Hal Singer music house in Chatou, France. </p>
+      </div>
+      <div id="textprov" class="col-lg-3 col-md-6 col-sm-12">
+        <p class="start-para"> 2020 </p>
+				<p> “The finish line” Remiseparken. A public art project in collaboration with BOGL Architects. Commissioned by the Copenhagen Commune. Copenhagen Denmark. 		</p>
+      </div>
+      <div id="textprov" class="col-lg-3 col-md-6 col-sm-12"> 
+        <p class="start-para"> 2019 </p>
+				<p> Wood Art Institute Museum, selected works, Hamburg Germany.
+		Fly Like an Eagle, large scale painting commissioned by the city of New Rochelle, New York, USA
+		ILO 100, A mural celebrating ILO 100 years. 
+    </p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="row"> 
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      	<p class="start-para"> 2018</p>
+				<p> Car Mountain installation for BIG ART,  Kunsthal Charlottenborg, Copenhagen Denmark.
+“The craters” Painting Project in the city of Herford in colaboration with the Marta Herford Museum, Herford, Germany.
+“Eclipse” Large scale painting in the city of Sandefjord, commissioned by Sandefjord Kunstforening, Norway.
+“Interstellar Refugees”, large mural painting, Skien, Norway.
+ 				</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+      	<p class="start-para"> 2017</p>
+      <p> “Star Dust” Solo exhibition, gallery Celal M13, Paris, France.
+  The United Nations building New York, USA . “At This Age” Charity group exhibition.
+  SAM projet Miami, a large scale painting and Charity Group Exhibition, Miami, USA.
+  Mural painting for IIT Kharagpur, West Bengal, India Institute of Technology, project suported by Statens Kunstfond Danish Art institute. 
+      </p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+      	<p class="start-para"> 2016 </p>
+        <p> Exhibition Gallery Eigen + Art, Berlin Germany.
+    Exhibition Emergency Room, Museum of african art Johannesburg, South Africa.
+    Exhibition“StrassenKunztEdition” lithography series for Kunsthauses Hamburg, Germany
+    “ Eye of the Tiger“Painting on stage for the Saarang Festival Madras ITT Madras Institute of Technology Chennai, India,
+    project suported by Statens Kunstfond Danish Art institute.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+      	<p class="start-para"> 2015 </p>
+        <p> “The Wolf of Copenhell”, 2000 m2 painting on B&W Hallerne, Copenhagen, Denmark, 2015.
+        “May the roof over your head be always strong” 6 wall paintings in the entrance of Kunstraum Kreuzberg / Bethanien museum.
+        Various sizes, Berlin Germany, 2015. Institute of Technology Chennai, India, project suported by Statens Kunstfond Danish Art institute.</p>
+      </div>
+    </div>
+    
+    
+    
+    <div class="row"> 
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <p class="start-para"> 2014 </p>
+<p>“The Waves”, Amman, Jordan. A mural painting in the centre of the Jordanian capital Amman, commissioned by the Jordanian tourist office.
+“Border to Paradise” Tenerife, Spain, mural commissioned by the City of Santa Cruz de Tenerife.</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <p class="start-para"> 2013 </p>
+        <p> “Havudsigten” Exhibition and mural painting on the Haderslev Silo, Haderslev, Denmark.
+    With the support of the Danish Arts Foundation, Statens Kunstfond.
+    Exhibition “The Red Dog” part of the “Red never Follows” show.  </p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <p class="start-para"> 2012 </p>
+        <p> Exhibition “Animals Faces” . Beyond art at Platoon Kunsthalle, Seoul, South Korea.
+    “Animals Faces” . Sommer Frische Kunst, a series of wall paintings and exhibition on the Stubnerkogel, Bad Gastein, Austria.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+      	 <p class="start-para"> 2011 </p>
+          <p> “Tree Children” , Wedding walls paintings projects, Berlin, Germany 2011.
+      Exhibition “Street art meanwhile in deepest east Anglia, thunderbirds were go”, Von der Heydt museum, Kunsthalle barmen, Wuppertal Germany.
+          </p>
+      </div>
+    </div>
+    
+  </section>
+  <section id="gallery">
+		<h3 id="section-title" >PORTFOLIO</h3>
+    <div class="gallery-con">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+        	<div class="card">
+            				<img class="card-img-top" src="https://www.victorash.com/wp-content/uploads/2018/02/victor_ash_say_hello_astronaut_.jpg" alt="Card image">
+                      	<div class="card-body">
+                          <h4 class="card-title">Lost in Space</h4>
+                          <p class="card-text">Acrylic paint on canvas 200 X 160 cm 2017</p>
+                      	</div>
+                 </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+        	<div class="card">
+          					<img class="card-img-top" src="https://www.victorash.com/wp-content/uploads/2018/01/victor_ash_eclypse_100x80cm_2017.jpg" alt="Card image" >
+                      	<div class="card-body">
+                          	<h4 class="card-title">There is More Than What You See (Mural).</h4>
+                          	<p class="card-text"> Location: Stockfleths gate 6, 3210 Sandefjord, Norway. Size: hight: 10 meters, width: 10 meters. Media: Acrylic paint on ciment wall, 3-storey building.</p>
+                      	</div>
+                </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+        	<div class="card">
+            				<img class="card-img-top" src="https://www.victorash.com/wp-content/uploads/2019/10/victor_ash_yuri_gagarin_1-e1571734516364.jpg" alt="Card image" >
+                      	<div class="card-body">
+                          <h4 class="card-title">The Dream</h4>
+                          <p class="card-text">Marzahn Berlin, Germany 2019</p>
+                      	</div>
+                 </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+        	<div class="card">
+          					<img class="card-img-top" src="https://www.victorash.com/wp-content/uploads/2018/01/victor_ash_haderslev_2014_b2.jpg" alt="Card image">
+                      	<div class="card-body">
+                          	<h4 class="card-title">Sea View</h4>
+                          	<p class="card-text"> The Haderslev silo 1500 m2. wall painting Haderslev Denmark 2013</p>
+                      	</div>
+                </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+        	<div class="card">
+            				<img class="card-img-top" src="https://www.victorash.com/wp-content/uploads/2018/11/victorash_new_york_2018_1-e1573639811204.jpg" alt="Card image" >
+                      	<div class="card-body">
+                          <h4 class="card-title">Glitches</h4>
+                          <p class="card-text">A mural near Wall Street in NYC. Location: 25 Bridge St, New York, NY 10004, USA. Size: hight: 19,2 meters, width: 13,70 meters. Media: Acrylic paint on brick wall</p>
+                      	</div>
+                 </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+        	<div class="card">
+          					<img class="card-img-top" src="https://www.victorash.com/wp-content/uploads/2022/03/Kunstsalonen_5.jpeg" alt="Card image" >
+                      	<div class="card-body">
+                          	<h4 class="card-title">Circles</h4>
+                          	<p class="card-text"> A site specific exhibition in dialogue with classic nordic intérieur design. Gallery Anne Aarsland Copenhagen 2022. Exhibition overview
+</p>
+                      	</div>
+                </div>
+        </div>
+      </div>	
+    </div>
+   </section>
+  
+  <section id="shop">
+
+ 
+ 
+ 
+ 
+ 
+    <header>
+  <div class="pricing-header">
+    <h3 id="section-title" >SHOP</h3>
+    <p class="fs">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+  </div>
+</header>
+<main>
+  <button class="accordion">Frame images</button>
+<div class="shop-row">
+  <div class="shop-col">
+    <div class="shop-col-head">
+      50$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 50x50cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="50" data-typ="framed 50x50" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="50" data-typ="framed 50x50">There is More Than What You See</option>
+            <option value="The Dream" data-price="50" data-typ="framed 50x50">The Dream</option>
+            <option value="Sea View" data-price="50" data-typ="framed 50x50">Sea View</option>
+            <option value="Glitches" data-price="50" data-typ="framed 50x50">Glitches</option>
+            <option value="Circles" data-price="50" data-typ="framed 50x50">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+
+  <div class="shop-col">
+    <div class="shop-col-head">
+      100$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 75x75cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz1" name="jakiobraz6" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="75" data-typ="framed 75x75" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="75" data-typ="framed 75x75">There is More Than What You See</option>
+            <option value="The Dream" data-price="75" data-typ="framed 75x75">The Dream</option>
+            <option value="Sea View" data-price="75" data-typ="framed 75x75">Sea View</option>
+            <option value="Glitches" data-price="75" data-typ="framed 75x75">Glitches</option>
+            <option value="Circles" data-price="75" data-typ="framed 75x75">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc1"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart1()">
+      </form>
+    </div>
+  </div>
+
+  <div class="shop-col">
+    <div class="shop-col-head">
+      150$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 100x100cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz5" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="100" data-typ="framed 100x100" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="100" data-typ="framed 100x100">There is More Than What You See</option>
+            <option value="The Dream" data-price="100" data-typ="framed 100x100">The Dream</option>
+            <option value="Sea View" data-price="100" data-typ="framed 100x100">Sea View</option>
+            <option value="Glitches" data-price="100" data-typ="framed 100x100">Glitches</option>
+            <option value="Circles" data-price="100" data-typ="framed 100x100">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+</div>
+
+<button class="accordion">Paintings on canvas</button>
+<div class="shop-row">
+  <div class="shop-col">
+    <div class="shop-col-head">
+      50$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 50x50cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz4" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="60" data-typ="canvas 50x50" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="60" data-typ="canvas 50x50">There is More Than What You See</option>
+            <option value="The Dream" data-price="60" data-typ="canvas 50x50">The Dream</option>
+            <option value="Sea View" data-price="60" data-typ="canvas 50x50">Sea View</option>
+            <option value="Glitches" data-price="60" data-typ="canvas 50x50">Glitches</option>
+            <option value="Circles" data-price="60" data-typ="canvas 50x50">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+
+  <div class="shop-col">
+    <div class="shop-col-head">
+      100$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 75x75cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz2" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="120" data-typ="canvas 75x75" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="120" data-typ="canvas 75x75">There is More Than What You See</option>
+            <option value="The Dream" data-price="120" data-typ="canvas 75x75">The Dream</option>
+            <option value="Sea View" data-price="120" data-typ="canvas 75x75">Sea View</option>
+            <option value="Glitches" data-price="120" data-typ="canvas 75x75">Glitches</option>
+            <option value="Circles" data-price="120" data-typ="canvas 75x75">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+
+  <div class="shop-col">
+    <div class="shop-col-head">
+      150zł$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 100x100cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz3" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="50" data-typ="canvas 100x100" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="50" data-typ="canvas 100x100">There is More Than What You See</option>
+            <option value="The Dream" data-price="180" data-typ="canvas 100x100">The Dream</option>
+            <option value="Sea View" data-price="180" data-typ="canvas 100x100">Sea View</option>
+            <option value="Glitches" data-price="180" data-typ="canvas 100x100">Glitches</option>
+            <option value="Circles" data-price="180" data-typ="canvas 100x100">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+</div>
+
+<button class="accordion">Images on accessories</button>
+<div class="shop-row">
+  <div class="shop-col">
+    <div class="shop-col-head">
+      50zł$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 50x50cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz4" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="50" data-typ="cup" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="50" data-typ="cup">There is More Than What You See</option>
+            <option value="The Dream" data-price="50" data-typ="cup">The Dream</option>
+            <option value="Sea View" data-price="50" data-typ="cup">Sea View</option>
+            <option value="Glitches" data-price="50" data-typ="cup">Glitches</option>
+            <option value="Circles" data-price="50" data-typ="cup">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+
+  <div class="shop-col">
+    <div class="shop-col-head">
+      100$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 75x75cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobraz5" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="50" data-typ="pen" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="50" data-typ="pen">There is More Than What You See</option>
+            <option value="The Dream" data-price="50" data-typ="pen">The Dream</option>
+            <option value="Sea View" data-price="50" data-typ="pen">Sea View</option>
+            <option value="Glitches" data-price="50" data-typ="pen">Glitches</option>
+            <option value="Circles" data-price="50" data-typ="pen">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+
+  <div class="shop-col">
+    <div class="shop-col-head">
+      150$/pc
+    </div>
+    <div class="shop-col-body">
+      dodwolny obraz z galerii w ramce o wymiarach 100x100cm
+    </div>
+    <div class="shop-col-body-form">
+      <form class="shop-col-body-div-form">
+        
+        
+        
+        <label for="cars">Choose a paint:</label>
+          <select id="obraz" name="jakiobra6z" class="shop-col-body-select">
+            <option value="Lost in Space" data-price="50" data-typ="hat" >Lost in Space</option>
+            <option value="There is More Than What You See" data-price="50" data-typ="hat0">There is More Than What You See</option>
+            <option value="The Dream" data-price="50" data-typ="hat">The Dream</option>
+            <option value="Sea View" data-price="50" data-typ="hat">Sea View</option>
+            <option value="Glitches" data-price="50" data-typ="hat">Glitches</option>
+            <option value="Circles" data-price="50" data-typ="hat">Circles</option>
+          </select></label>
+          <label>ilość: <input type="number" class="shop-col-body-number" id="ilosc"></label>
+        <input type="button" class="shop-col-body-button" value="BUY" onclick="addToCart()">
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+</section>
+
+
+<!---Skryp do rozsuwania okien w sklepie -->
+<script>
+var accordions = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < accordions.length; i++) {
+  accordions[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var shopRow = this.nextElementSibling;
+    if (shopRow.style.maxHeight) {
+      shopRow.style.maxHeight = null;
+    } else {
+      if (window.innerWidth <= 1200) {
+        shopRow.style.maxHeight = "1300px"; // Zwiększ maksymalną wysokość do 1300 pikseli dla @media o maksymalnej szerokości 1200px
+      } else {
+        shopRow.style.maxHeight = shopRow.scrollHeight + "px";
+      }
+    }
+  });
+
+
+}
+
+
+</script>
+  <!--Skrypt do aktalizacji koszyka-->
+      <script>
+  function addToCart() {
+  var obraz = document.getElementById("obraz").value; // Pobranie wartości wybranej opcji z pola wyboru "obraz"
+  var typ = document.getElementById("obraz").options[document.getElementById("obraz").selectedIndex].getAttribute("data-typ");
+  var ilosc = parseInt(document.getElementById("ilosc").value); // Pobranie wartości wpisanej w polu ilości
+  var cena = parseInt(document.getElementById("obraz").options[document.getElementById("obraz").selectedIndex].getAttribute("data-price"));
+
+  if (ilosc === null || ilosc === "" || isNaN(ilosc) || ilosc <= 0) {
+    alert("ERROR: Wrong amount.");
+    return;
+  }
+
+  alert("Thank you for your purchase: " + ilosc + "x " + typ +  " " + obraz + " za " + cena * ilosc + "$" );
+  
+}
+</script>
+  <section id="contact">
+            <h3 id="section-title" >CONTACT </h3>
+                    <div id="map" style="max-width:100%;width:67vw;height:30vh;">
+                        <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=new+york&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            </iframe>
+                        </div>
+                    </div>
+                
+                    <form>
+                        <input type="text"  placeholder="Name">
+                        <input type="email"  placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                        <textarea rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                    </form>
+                    <button type="button">Contact Me</button>
+    </section>
+  
+  <section id="footer">
+        <div class="container-fluid">
+            <div  class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            </div>
+        </div>
+    <br>
+    		<div id="footer-copy"> Victor Ash 2023
+The works of art represented here are protected by national and international copyright laws. Reproduction af the artworks is strictly forbidden without permission from the rightholder or copyright society he is represented by. To obtain permission please contact mail@visda.dk
+    		</div>
+    		<hr>
+    </section>
+
+	
+</body> 
+</html>
