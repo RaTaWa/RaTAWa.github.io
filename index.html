@@ -1084,13 +1084,37 @@ for (var i = 0; i < accordions.length; i++) {
                         </div>
                     </div>
                 
-                    <form>
-                        <input type="text"  placeholder="Name">
-                        <input type="email"  placeholder="Email">
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
-                    </form>
-                    <button type="button">Contact Me</button>
+<body>
+  <form id="contactForm">
+    <input type="text" id="nameInput" placeholder="Name">
+    <input type="email" id="emailInput" placeholder="Email">
+    <input type="text" id="subjectInput" placeholder="Subject">
+    <textarea rows="5" id="commentInput" name="text" placeholder="Project Details"></textarea>
+  </form>
+  <button type="button" onclick="submitForm()">Contact Me</button>
+
+  <script>
+    function submitForm() {
+      var name = document.getElementById("nameInput").value;
+      var email = document.getElementById("emailInput").value;
+      var subject = document.getElementById("subjectInput").value;
+      var comment = document.getElementById("commentInput").value;
+
+      if (name === '' || email === '' || subject === '' || comment === '') {
+        var emptyField = '';
+        if (name === '') emptyField = 'Name';
+        else if (email === '') emptyField = 'Email';
+        else if (subject === '') emptyField = 'Subject';
+        else if (comment === '') emptyField = 'Project Details';
+
+        alert('ERROR: ' + emptyField + ' field is empty');
+      } else {
+        alert('Thanks for your message. I will answer as fast as I can.');
+        document.getElementById("contactForm").reset();
+      }
+    }
+  </script>
+
     </section>
   
   <section id="footer">
